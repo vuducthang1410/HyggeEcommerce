@@ -1,0 +1,20 @@
+server:
+  port: 8081
+#eureka:
+#  client:
+#    service-url:
+#      default-zone: http://localhost:8761/eureka/
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    database: mysql
+    show-sql: true
+  datasource:
+    username: root
+    password: 123xxThang@
+    url: jdbc:mysql://localhost:3306/HyggeProductManageService

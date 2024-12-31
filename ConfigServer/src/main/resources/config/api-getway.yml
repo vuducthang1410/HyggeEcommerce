@@ -1,0 +1,26 @@
+server:
+  port: 8084
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: eureka-server
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/service-a/**
+          filters:
+            - StripPrefix=1
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/service-b/**
