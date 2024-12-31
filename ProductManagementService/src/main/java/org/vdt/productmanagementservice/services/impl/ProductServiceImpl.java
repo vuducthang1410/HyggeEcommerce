@@ -1,4 +1,4 @@
-package org.vdt.productmanagementservice.services;
+package org.vdt.productmanagementservice.services.impl;
 
 import org.springframework.stereotype.Service;
 import org.vdt.productmanagementservice.entities.Products;
