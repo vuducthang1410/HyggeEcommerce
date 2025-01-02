@@ -1,4 +1,4 @@
-package org.vdt.productmanagementservice.services.impl;
+package org.vdt.productmanagementservice.services;
 
 public interface IProductService {
 }

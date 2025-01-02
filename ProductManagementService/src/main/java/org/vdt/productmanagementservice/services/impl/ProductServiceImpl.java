@@ -1,12 +1,12 @@
-package org.vdt.productmanagementservice.services;
+package org.vdt.productmanagementservice.services.impl;
 
 import org.springframework.stereotype.Service;
-import org.vdt.productmanagementservice.entities.Products;
+import org.vdt.productmanagementservice.entities.Product;
 
 @Service
 public class ProductServiceImpl {
-    public String saveProduct(Products product) {
-        Products newProduct = new Products();
+    public String saveProduct(Product product) {
+        Product newProduct = new Product();
         newProduct.setName(product.getName());
         return "hehe";
     }
