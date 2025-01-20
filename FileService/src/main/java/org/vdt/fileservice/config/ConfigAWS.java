@@ -10,21 +10,21 @@ import software.amazon.awssdk.services.s3.S3Client;
 
 @Configuration
 public class ConfigAWS {
-    @Value("${aws.accessKeyId}")
-    private String accessKeyId;
-
-    @Value("${aws.secretAccessKey}")
-    private String secretAccessKey;
-
-    @Value("${aws.region}")
-    private String region;
-
-    @Bean
-    public S3Client awsCredentialsProvider() {
-        return S3Client.builder().region(Region.of(region)).
-                credentialsProvider(StaticCredentialsProvider
-                        .create(AwsBasicCredentials.create(accessKeyId, secretAccessKey)
-                        )
-                ).build();
-    }
+//    @Value("${aws.accessKeyId}")
+//    private String accessKeyId;
+//
+//    @Value("${aws.secretAccessKey}")
+//    private String secretAccessKey;
+//
+//    @Value("${aws.region}")
+//    private String region;
+//
+//    @Bean
+//    public S3Client awsCredentialsProvider() {
+//        return S3Client.builder().region(Region.of(region)).
+//                credentialsProvider(StaticCredentialsProvider
+//                        .create(AwsBasicCredentials.create(accessKeyId, secretAccessKey)
+//                        )
+//                ).build();
+//    }
 }

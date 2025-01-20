@@ -7,9 +7,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public enum ResponseCode {
-
-    ERR_PRD_CREATE("ERR_PRS_0001","Execute error when create new product");
+    ERR_CTG_CREATE("category.create.error"),
+    SUCCESS_CTG_CREATE("category.create.successful"),
+    ERR_CTG_NOT_FOUND("category.find.notfound"),
+    SUCCESS_CTG_DELETE("category.delete.successful"),
+    ERR_INPUT_VALIDATED("validated.failure"),
+    SUCCESS_CTG_FOUND("category.find.successful"),
+    SERVER_ERROR("server.error"),
+    PAGE_SIZE_MIN("page.size.min"),
+    PAGE_NUMBER_MIN("page.number.min"),
+    SUCCESS_ACC_CREATE("acc.create.successful"),
+    ;
     private String code;
-    private String desc;
 }
 

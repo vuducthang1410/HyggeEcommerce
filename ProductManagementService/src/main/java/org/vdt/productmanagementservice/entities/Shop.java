@@ -12,9 +12,9 @@ import lombok.EqualsAndHashCode;
 @Entity
 @Table(name = "tbl_shop")
 public class Shop extends BaseEntity{
-    @Column(unique=true, nullable=false,length = 255,name = "NAME")
+    @Column(nullable=false,length = 255,name = "NAME")
     private String name;
-    @Column(unique=true, nullable=false,length = 200,name = "ADDRESS")
+    @Column(nullable=false,length = 200,name = "ADDRESS")
     private String address;
     @Column(nullable=false,length = 11,name = "PHONE_NUMBER")
     private String phoneNumber;

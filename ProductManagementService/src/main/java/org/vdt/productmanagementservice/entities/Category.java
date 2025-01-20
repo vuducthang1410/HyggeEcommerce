@@ -14,13 +14,13 @@ import lombok.EqualsAndHashCode;
 @Data
 @Table(name = "tbl_category")
 public class Category extends BaseEntity {
-    @Column(unique = true, nullable = false,length = 150,name = "NAME")
+    @Column( nullable = false,length = 150,name = "NAME")
     private String name;
     @Column(nullable = false,name = "DESCRIPTION")
     @Lob
-    private Byte[] description;
-    @Column(nullable = true,length = 50,name = "PARRENT_ID")
+    private byte[] description;
+    @Column(length = 50,name = "PARRENT_ID")
     private String parentId;
-    @Column(unique = true, nullable = false,length = 150,name = "URL_IMAGE")
+    @Column(nullable = false,length = 150,name = "URL_IMAGE")
     private String urlImage;
 }
